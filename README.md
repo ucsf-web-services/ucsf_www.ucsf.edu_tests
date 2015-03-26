@@ -5,6 +5,6 @@ If we want to convert the tests to automated tests as some point, using this str
 
 Tests are “features”. Go to https://github.com/johnkealy/ucsf_www.ucsf.edu_tests/blob/master/behat/features/banner_navigation.feature to see an example of this.
 
-If you write a test place @TBI above the scenario. That means “To  Be Implemented”. In other words, the test isn’t automate yet. When we automate we will remove the template.
+If you write a test place @TBI above the scenario. That means “To  Be Implemented”. In other words, the test isn’t automated yet. When we automate we will remove the template.
 
 

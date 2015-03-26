@@ -1,4 +1,4 @@
-# ucsf_www.ucsf.edu_tests
+# ucsf www.ucsf.edu tests
 This repo is a fork of @stopfstedt  tests for the UCSF install package (https://github.com/ucsf-drupal/ucsf_installprofile). If you’ve seen a default starter kit site (http://template1.ucsf.edu/) you should be able to follow the tests and how they relate.
 
 If we want to convert the tests to automated tests as some point, using this structure should simplify the process.

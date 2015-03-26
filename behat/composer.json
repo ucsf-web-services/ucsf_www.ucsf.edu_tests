@@ -1,0 +1,12 @@
+{
+    "require": {
+        "phpunit/phpunit": "3.7.*",
+        "drupal/drupal-extension": "3.0.*@stable",
+        "sauce/connect": ">=3.0",
+        "emagister/selenium-server": "2.*"
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "bin-dir": "bin/"
+    }
+}

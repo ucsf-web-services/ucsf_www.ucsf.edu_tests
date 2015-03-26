@@ -1,0 +1,50 @@
+# default profile
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
+      filters:
+         # don't process scenarios and features tagged as "ignored"
+         tags: '~@ignored'
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://localhost
+      default_session: default
+      javascript_session: browser
+      browser_name: "firefox"
+      sessions:
+        default:
+          goutte: ~
+        browser:
+          selenium2:
+            capabilities: { "browser": "firefox", "version": "33" }
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: 'drupal'
+      drupal:
+        drupal_root: '/path/to/your/ucsf_installprofile/webroot'
+      region_map:
+        Admin Menu: "#admin-menu"
+        Content: ".content"
+        Top Header: ".top-region-container"
+        Header: ".header-region"
+        Footer Top: ".footer-top"
+        Footer: ".footer"
+        Sidebar First: ".sidebar-first"
+        Sidebar Second: ".sidebar-second"
+        Highlighted: ".drupal-messages"
+        Page Container: ".page-container"
+      selectors:
+        message_selector: '.messages'
+        error_message_selector: '.messages.error'
+        success_message_selector: '.messages.status'
+# Use this profile to run all tests in Firefox
+browser:
+  extensions:
+    Behat\MinkExtension:
+      default_session: browser

@@ -3,7 +3,7 @@ This repo is a fork of @stopfstedt  tests for the UCSF install package (https://
 
 If we want to convert the tests to automated tests as some point, using this structure should simplify the process.
 
-Tests are “features”. Go to https://github.com/johnkealy/ucsf_www.ucsf.edu_tests/blob/master/behat/features/banner_navigation.feature to see an example of this.
+Tests are “features”. /behat/features/main_navigation.feature to see an example of this.
 
 If you write a test place @TBI above the scenario. That means “To  Be Implemented”. In other words, the test isn’t automated yet. When we automate we will remove the template.
 

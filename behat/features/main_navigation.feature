@@ -17,7 +17,7 @@ Feature: Main Navigation
     And I should see the link "facebook" in the "Header" region
     And I should see the link "twitter" in the "Header" region
     And I should see the link "YouTube" in the "Header" region
-
+@TBI
   Scenario Outline: Follow link in main navigation
     When I follow "<link>" in the "Header" region
     Then I should be on "<path>"

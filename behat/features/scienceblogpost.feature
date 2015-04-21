@@ -1,3 +1,5 @@
+#Note this is not a Phase 1 (june 1, 2015) feature
+
 Feature:
   In order to provide relevant news to my site's audience
   As a content provider

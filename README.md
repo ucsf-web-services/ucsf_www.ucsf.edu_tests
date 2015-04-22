@@ -7,4 +7,4 @@ Tests are “features”. /behat/features/main_navigation.feature to see an exam
 
 If you write a test place @TBI above the scenario. That means “To  Be Implemented”. In other words, the test isn’t automated yet. When we automate we will remove the template.
 
-
+This is a test

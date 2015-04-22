@@ -8,22 +8,18 @@ Feature: Banner Navigation
 
   Scenario: See the UCSF banner navigation
     And I should see the link "University of California, San Francisco" in the "Top Header" region
-    And I should see the link "About UCSF" in the "Top Header" region
-    And I should see the link "Search UCSF" in the "Top Header" region
-    And I should see the link "UCSF Medical Center" in the "Top Header" region
+    #
+    And I should see the button "Advanced" in the "Top Header" region
+    And I should see the form field "Search" in the "Top Header" region
 
   Scenario: Follow "University of California, San Francisco" link in the UCSF banner navigation
     And I follow "University of California, San Francisco" in the "Top Header" region
     Then I should be on "http://www.ucsf.edu/"
 
-  Scenario: Follow "About UCSF" link in the UCSF banner navigation
-    And I follow "About UCSF" in the "Top Header" region
-    Then I should be on "http://www.ucsf.edu/about"
+  Scenario: Click the  "Advanced" button in the UCSF banner navigation
+    And Click the  "Advanced" button in the UCSF banner navigation
+    Then
 
-  Scenario: Follow "Search UCSF" link in the UCSF banner navigation
-    And I follow "Search UCSF" in the "Top Header" region
-    Then I should be on "http://www.ucsf.edu/search"
-
-  Scenario: Follow "UCSF Medical Center" link in the UCSF banner navigation
-    And I follow "UCSF Medical Center" in the "Top Header" region
-    Then I should be on "http://www.ucsfhealth.org/"
+  Scenario: Enter "cancer" in the "Search" field and submit form  in the UCSF banner navigation
+    And Enter "cancer" in the "Search" field and submit form in the UCSF banner navigation
+    Then I should be on "mysite/search?search=cancer&search-type=on"

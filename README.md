@@ -6,5 +6,3 @@ If we want to convert the tests to automated tests as some point, using this str
 Tests are “features”. /behat/features/main_navigation.feature to see an example of this.
 
 If you write a test place @TBI above the scenario. That means “To  Be Implemented”. In other words, the test isn’t automated yet. When we automate we will remove the template.
-
-This is a test

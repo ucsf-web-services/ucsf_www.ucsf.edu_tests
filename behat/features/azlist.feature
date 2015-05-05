@@ -8,36 +8,36 @@
 
   @TBI
   Scenario: A-Z List of Websites
-    Then I should see the heading "A-Z List of Websites"
+    Then I should see the heading "A-Z List of Websites" in the ".header-region"
 
   @TBI
   Scenario: Blocks of Letter
-    Then I should see boxes filled with letters decending in aplphabetical order from A-Z in the "Sidebar First" region
-    When I press on "A" I should see websites starting with "A" in the "Content" region
+    Then I should see boxes filled with letters decending in aplphabetical order from A-Z in the ".sidebar-first" region
+    When I press on "A" I should see websites starting with "A" in the ".content" region
     And I should be on "testsite/azlist/a"
 
   @TBI
   Scenario: Search for Websites by Name
-    Then I should see the "By Name" field in the "Sidebar First" region
+    Then I should see the "By Name" field in the ".sidebar-first" region
     When I type in "student" in the "By Name" field and press the "SEARCH" button
-    Then I should see websites containing the word "Student" in the "Content" region
-    And I should see the link "Academic Affairs, Student" in the "Content" region
+    Then I should see websites containing the word "Student" in the ".content" region
+    And I should see the link "Academic Affairs, Student" in the ".content" region
 
   @TBI
   Scenario: Search for Websites by Topic
-    Then I should see the "By Topic" field in the "Sidebar First" region
+    Then I should see the "By Topic" field in the ".sidebar-first" region
     When I press on the field
     Then I should see "Aging" as the first topic
 
   @TBI
   Scenario: Click on letter block "P"
-    And enter "Parnassus" in the "By Name" field in the "Sidebar First" region
+    And enter "Parnassus" in the "By Name" field in the ".sidebar-first" region
     Then I should websites containing "Parnassus" starting with "P"
     And I should see the link "Parnassus Cores - Biological Imaging.."
 
   @TBI
   Scenario: Blocks of Page Numbers
-    Then I should see numerical blocks in ascending order in the bottom "Content" region
+    Then I should see numerical blocks in ascending order in the bottom ".content" region
     And  options to view the "next" and "last" page of "testsite/azlist"
 
   @TBI

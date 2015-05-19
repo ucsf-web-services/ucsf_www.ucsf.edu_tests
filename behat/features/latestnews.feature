@@ -7,38 +7,28 @@ Background:
   Given I am on the testsite
 
 @TBI
-Scenario: View All Latest News
-  Then I should see a tab containing "All"
-  When I press on the field
-  Then I should see a boxes containting to "Find a Doctor"
+Scenario: Latest News
+  When I scroll down I should see the tab "All" pre-selected
+  And  I should see recent news descending in date in the ".content" region
+  When I press on "UCSF Art & Architecture at Mission Bay"
+  Then I should be on "testsite/news/2015/05/129186/ucsf-art-architecture-mission-bay"
 
 @TBI
 Scenario: View Patient Care News
-  Then I should see a "Filter Results" field below the header "Recent Media Coverage"
-  When I press on "Filter Results"
-  And  type in "Cancer" in the field and click "Apply"
-  Then I should a link to "Cancer Drug Flushes out HIV"
+  When I select the tab "Patient Care"
+  Then I should be directed to "testsite/news/latest/patient-care"
+  And  I should see articles associated with patient care
+  And  I should see options to view the "first" and "last" page
 
 @TBI
-Scenario: View Education News
-  Then I should see a list of articles in the ".sidebar-second" region
-  When I press on the field "UCSF-Led Study Explains How Early Childhood Vaccination Reduces Leukemia Risk"
-  Then I should be directed to "tetssite/news/2015/05/129191/ucsf-led..."
+Scenario: Campus News
+  When I select the tab "Campus News"
+  Then I should be directed to "testsite/news/latest/research"
+  And  I should see a section for "Campus News" in the ".content-bottom" region
+  And  I should see the links "Announcements","Collaboration","Honors & Rewards","Spotlight"
 
 @TBI
-Scenario: View Patient Care News
-  Then I should see a "Filter Results" field below the header "Recent Media Coverage"
-  When I press on "Filter Results"
-  And  type in "Cancer" in the field and click "Apply"
-  Then I should a link to "Cancer Drug Flushes out HIV"
-
-@TBI
-Scenario: View Education News
-  Then I should see a list of articles in the ".sidebar-second" region
-  When I press on the field "UCSF-Led Study Explains How Early Childhood Vaccination Reduces Leukemia Risk"
-  Then I should be directed to
-
-Scenario: View Education News
-  Then I should see a list of articles in the ".sidebar-second" region
-  When I press on the field "UCSF-Led Study Explains How Early Childhood Vaccination Reduces Leukemia Risk"
-  Then I should be directed to
+Scenario: Research News
+  When I select the tab "Research"
+  Then I should be directed to "testsite/news/latest/patient-care"
+  And  I should see the "Most Popular" news block in the ".sidebar-second" region

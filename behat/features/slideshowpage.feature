@@ -24,4 +24,4 @@ Scenario: Click on Links
   When I navigate to the "slideshow" view
   And  I select the image "STAND UP FOR SCIENCE"
   When I press on the linked text "won a national video competition"
-  Then I should be directed to "ucsf.edu/news/2014/02/111956/science-policy-te.."
+  Then I should be directed to "ucsf.edu/news/2014/02/111956/science-policy-te"
